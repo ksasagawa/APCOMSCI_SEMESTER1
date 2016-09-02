@@ -1,0 +1,23 @@
+AP Comp sci lesson 01
+The first lesson consisted of creating the text file for the first project and making it into a Java file.
+Using notepad++ we defined the class for the file as the name and used the notepad++ execute plugin to create
+	compile and execute functions on notepad
+We then created a string with a static void main function and printed out "Hello World", closed the function with
+	a ; and closed all of the brackets.
+The next task was to create ASCII art using the format of the first project. I created a diagonal downwards arrow
+	and a picture of a truck. 
+Some characters are banned in the text as they serve a function so escape characters are needed.
+\t \b \n \r \f \' \" \\ all serve different functions in the quotes such as \n inserting a new line.
+Some art is pasted below
+
+
+                     __,,,,_
+       _ __..-;''`--/'/ /.',-`-.
+   (`/' ` |  \ \ \\ / / / / .-'/`,_
+  /'`\ \   |  \ | \| // // / -.,/_,'-,
+ /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
+/  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
+`-`  f/ ;      / __/ \__ `/ |__/ |
+     `-'      |  -| =|\_  \  |-' |
+           __/   /_..-' `  ),'  //
+          ((__.-'((___..-'' \__.'
