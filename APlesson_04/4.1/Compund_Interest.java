@@ -23,10 +23,10 @@ public class Compund_Interest
 	}
 	public double Final (double p, double r, double n, double t)
 	{
-		return Math.pow((1+(r/n)), (n*t))*p;
+		return Math.pow(1+r/n, n*t)*p;
 	}
 	public double monthly (double p, double r, double n, double t)
 	{
-		return Math.pow((1+(r/n)), (n*t))*p/(12*t);
+		return Math.pow(1+r/n, n*t)*p/(12*t);
 	}
 }
