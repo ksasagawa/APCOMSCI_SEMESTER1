@@ -14,7 +14,7 @@ public class Circle
 	}
 	public static void calcArea()
 	{
-		area = Math.pow(r*3.14, 2);
+		area = Math.pow(r, 2)*Math.PI;
 	}
 	public static void print()
 	{
