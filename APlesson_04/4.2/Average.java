@@ -2,22 +2,27 @@ import java.util.Scanner;
 
 public class Average
 {
+	static double num1;
+	static double num2;
+	static double num3;
+	static double avg;
 	public static void main(String[]args)
 	{
 		Scanner k = new Scanner(System.in);
 		System.out.println("What is the first number?");
-		double num1 = k.nextDouble();
+		num1 = k.nextDouble();
 		System.out.println("What is the second number?");
-		double num2 = k.nextDouble();
+		num2 = k.nextDouble();
 		System.out.println("What is the third number?");
-		double num3 = k.nextDouble();
-		print(num1, num2, num3, calcAvg(num1, num2, num3));
+		num3 = k.nextDouble();
+		calcAvg();
+		print();
 	}
-	public static double calcAvg(double num1, double num2, double num3)
+	public static void calcAvg()
 	{
-		return(num1+num2+num3)/3;
+		avg = (num1+num2+num3)/3;
 	}
-	public static void print(double num1, double num2, double num3, double avg)
+	public static void print()
 	{
 		System.out.printf("The average of %3f, %3f, and %3f is %8.5f", num1, num2, num3, avg);
 	}

@@ -2,18 +2,21 @@ import java.util.Scanner;
 
 public class Cube
 {
+	static double side;
+	static double sa;
 	public static void main(String[]args)
 	{
 		Scanner k = new Scanner(System.in);
 		System.out.println("What is the length of the side?");
-		double side = k.nextDouble();
-		print(side, calcSA(side));
+		side = k.nextDouble();
+		calcSA();
+		print();
 	}
-	public static double calcSA(double side)
+	public static void calcSA()
 	{
-		return Math.pow(side*6, 2);
+		side = Math.pow(side*6, 2);
 	}
-	public static void print(double side, double sa)
+	public static void print()
 	{
 		System.out.printf("The surface area of a cube with %4f sides is %8.5f", side, sa);
 	}
