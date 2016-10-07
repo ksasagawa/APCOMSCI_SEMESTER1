@@ -32,7 +32,7 @@ public class Reciept
 		pr.receipt_print(sub, subtotal);
 		pr.receipt_print(tx, tax);
 		pr.receipt_print(tot, total);
-		System.out.println("\n_____________________________________\n\t\tThank you!");
+		System.out.println("_____________________________________\n\t\tThank you!");
 	}
 	public void receipt_print(String entry, double price)
 	{

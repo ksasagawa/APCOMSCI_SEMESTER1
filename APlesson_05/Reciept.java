@@ -24,18 +24,19 @@ public class Reciept
 		double p4 = k.nextDouble();
 		total = p1+p2+p3+p4;
 		discount();
+		System.out.println("<<<<<<<<<__Receipt__>>>>>>>>>>>>>>");
 		r.print(i1, p1);
 		r.print(i2, p2);
 		r.print(i3, p3);
 		r.print(i4, p4);
-		System.out.printf("\n*          Total______________%8.2f",total);
+		System.out.printf("\n*%10s______________%8.2f", "Total",total);
 		if (total >= 2000)
 		{
-		System.out.printf("\n*         Discount______________15");
+		System.out.printf("\n*%10s______________15", "Discount");
 		}
 		else
 		{
-		System.out.printf("\n*         Discount______________0");	
+		System.out.printf("\n*%10s______________0", "Discount");	
 		}
 	}
 	public static void discount()
