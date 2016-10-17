@@ -15,14 +15,13 @@ public class Adventure
 				System.out.println("You did nothing again.\nWhat will you do next?\n1.Nothing\n2.Something\n3.Umm?");
 				int choice3 = k.nextInt();
 				if (choice3==1)
-	
 					System.out.println("Congrats, you\'ve done nothing.\nYou\'ve been lazy this whole time.");
-				else if (choice3 == 2)
-					System.out.println("You dicided to do something\n great job..");
+				else if (choice3==2)
+					System.out.println("You decided to do something\ngreat job..");
 				else 
 					System.out.println("What? What did you expect?");
 			}
-			else if(choice1 == 2)
+			else if(choice2 == 2)
 			{
 				System.out.println("You did something after nothing. What did you do?\n1.Ran\n2.Fought\n3.Sang");
 				int choice4 = k.nextInt();
@@ -51,7 +50,7 @@ public class Adventure
 			int choice6 = k.nextInt();
 			if(choice6 == 1)
 			{
-				System.out.println("Trashy. Next?\n1.\n2.\n.3.");
+				System.out.println("Trashy. Next?\n1.\n2.\n3.");
 				int choice7 = k.nextInt();
 				if (choice7 == 1)
 					System.out.println(".");
@@ -111,7 +110,7 @@ public class Adventure
 			}
 			else
 			{
-				System.out.println("I give up. This has taken too long");
+				System.out.println("I give up. This has taken way too long");
 			}
 		}
 	}
