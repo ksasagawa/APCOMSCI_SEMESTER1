@@ -16,7 +16,7 @@ public class Reverse
 	}
 	public static void reverse(String[] n)
 	{
-		for(int i =n.length-1; i>-1; i--)
+		for(int i =n.length-1; i>=0; i--)
 		{
 			System.out.println(n[i]);
 		}
