@@ -16,9 +16,9 @@ public class Prime
 	}
 	public static int gFactor(ArrayList<Integer> n, int i)
 	{
-		for(int a =2; a<n.get(i); a++)
+		for(int a = 2; a<n.get(i); a++)
 		{
-			if (n.get(i)%a == 0)
+			if (n.get(i)%a == 0 && a != n.get(i))
 				return n.get(i);
 		}
 		return 0;
