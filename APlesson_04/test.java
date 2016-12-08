@@ -3,8 +3,22 @@ public class test
 {
 	public static void main(String[]args)
 	{
-		
-		/*if (!(0>0)&&!(0*5 < 100)) 
+		/*int[] arr1 = {0, 6, 0, 4, 0, 0, 2};
+		int count = 0;
+	for (int i = 0; i < arr1.length; i++)
+	{
+		if (arr1[i] != 0)
+		{
+		arr1[count] = arr1[i];
+		count++;
+		}
+	}
+	int[] arr2 = new int[count];
+	for(int i = 0; i < count; i++)
+		arr2[i] = arr1[i];
+	for (int num : arr1)
+		System.out.println(num);
+		if (!(0>0)&&!(0*5 < 100)) 
 			System.out.println("AAA");
 		else
 			System.out.println("BBB");
