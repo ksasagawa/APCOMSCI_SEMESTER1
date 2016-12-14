@@ -44,13 +44,13 @@ public class Hthver
 	public static void printClip()
 	{
 		String output = "Health:\t";
-		for (int i = 0; i<HEALTHLOAD;i++)
+		for (int i = HEALTHLOAD; i>0;i--)
 		{
-			if (i < healthCount)
-				health[i] = " @ ";
+			if (i > healthCount)
+				health[i-1] = "[]";
 			else
-				health[i] = "[]";
-			output = output + health[i];
+				health[i-1] = " @ ";
+			output = output + health[i-1];
 		}
 		System.out.println(output);
 	}
