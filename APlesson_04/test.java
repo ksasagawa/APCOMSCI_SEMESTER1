@@ -49,4 +49,23 @@ public class test
 		String d = k.nextLine();
 		System.out.println(a+b+c+d);
 	}*/
+	/*public class classes
+	{
+		private int a,b,d,e,f,zzz;
+		public classes()
+		{
+			a = 0;
+			b = 0;
+			d = 0;
+			e = 0;
+			f = 0;
+			zzz = 0;
+		}
+		public classes (int a1, int b2, int d3)
+		{
+			a = a1;
+			b = b2;
+			d = d3;
+		}
+	}*/
 }
