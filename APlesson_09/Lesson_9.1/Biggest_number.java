@@ -5,7 +5,7 @@ public class Biggest_number
 		int[]arr = new int[10];
 		fillArray(arr);
 		printArray(arr);
-		System.out.println(getBiggest(arr));
+		System.out.println("\nThe biggest is:\n"+getBiggest(arr));
 	}
 	public static void fillArray(int[] a)
 	{
@@ -17,7 +17,7 @@ public class Biggest_number
 	public static void printArray(int[] a)
 	{
 		for(int num :a)
-			System.out.print(num+"\t");
+			System.out.print(num+"\n");
 	}
 	public static int getBiggest(int[]a)
 	{

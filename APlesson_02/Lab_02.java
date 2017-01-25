@@ -12,7 +12,7 @@ public class Lab_02
 		String City = "Encinitas";
 		String zipCode = "92027";
 		
-		System.out.println("***************************************\n" + Name + "\n" + Address + "\n" + City + "\n" + zipCode + "\n***************************************");
+		System.out.println("***************************************\n\t" + Name + "\n\t" + Address + "\n\t" + City + ", CA " + zipCode + "\n***************************************");
 		
 		int L = 15;
 		int H = 30;
