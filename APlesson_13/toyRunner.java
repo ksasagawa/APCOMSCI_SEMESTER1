@@ -13,5 +13,7 @@ public class toyRunner
 		toys = k.nextLine();
 		toyStore nw = new toyStore(toys);
 		System.out.println(nw);
+		System.out.println("Most Frequent Toy " + nw.getMostFrequentToy());
+		System.out.println("Most Frequent Type " + nw.getMostFrequentType());
 	}
 }
