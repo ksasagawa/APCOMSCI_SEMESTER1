@@ -1,8 +1,32 @@
 import java.util.Scanner;
 public class test
 {
+	public void diIt()
+	{
+		a();
+		b();
+		c();
+	}
+	public void a()
+	{
+		System.out.println("FAIL");
+	}
+	public void b()
+	{
+		System.out.println("FAIL");
+	}
+	public void c()
+	{
+		System.out.println("FAIL");
+	}
 	public static void main(String[]args)
 	{
+		testc1 a= new testc1();
+		a.diIt();
+		testc2 b= new testc2();
+		b.diIt();
+		testc3 c= new testc3();
+		c.diIt();
 		/*int[] arr1 = {0, 6, 0, 4, 0, 0, 2};
 		int count = 0;
 	for (int i = 0; i < arr1.length; i++)
@@ -68,4 +92,5 @@ public class test
 			d = d3;
 		}
 	}*/
+	
 }
