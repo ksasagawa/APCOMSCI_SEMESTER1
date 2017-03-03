@@ -9,8 +9,8 @@ public class GMC implements location
 	}
 	public GMC(double X, double Y)
 	{
-		x = X;
-		y = Y;
+		x += X;
+		y += Y;
 	}
 	public int getID()
 	{

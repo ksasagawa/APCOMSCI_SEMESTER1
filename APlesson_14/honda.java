@@ -20,8 +20,8 @@ public class honda implements location
 	}
 	public void move(double X, double Y)
 	{
-		x = X;
-		y = Y;
+		loca[0] += X;
+		loca[1] += Y;
 	}
 	public double[] getLoc()
 	{

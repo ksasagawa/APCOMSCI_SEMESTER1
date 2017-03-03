@@ -23,8 +23,10 @@ public class toyota implements location
 	}
 	public void move(double X, double Y)
 	{
-		x = X;
-		y = Y;
+		//x += X;
+		//y += Y;
+		loc[0] += X;
+		loc[1] += Y;
 	}
 	public double[] getLoc()
 	{
