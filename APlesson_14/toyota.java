@@ -1,6 +1,6 @@
 public class toyota implements location
 {
-	private String in;
+	private double[] loc;
 	private double x;
 	private double y;
 	public toyota()
@@ -10,9 +10,12 @@ public class toyota implements location
 	}
 	public toyota(String i)
 	{
-		in = i;
-		x = Double.parseDouble(in.substring(0,1));
-		y = Double.parseDouble(in.substring(3));
+		//in = i;
+		String[] locs = i.split(", ");
+		loc[0] = Double.parseDouble(locs[0]);
+		loc[1] = Double.parseDouble(locs[1]);
+		//x = Double.parseDouble(in.substring(0,1));
+		//y = Double.parseDouble(in.substring(3));
 	}
 	public int getID()
 	{
@@ -25,7 +28,7 @@ public class toyota implements location
 	}
 	public double[] getLoc()
 	{
-		double[] loc = new double[] {x,y};
+		//double[] loc = new double[] {x,y};
 		return loc;
 	}
 }
