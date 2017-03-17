@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class toyota implements location
 {
 	private double[] loc;
@@ -12,14 +13,15 @@ public class toyota implements location
 	{
 		//in = i;
 		String[] locs = i.split(", ");
-		loc[0] = Double.parseDouble(locs[0]);
-		loc[1] = Double.parseDouble(locs[1]);
-		//x = Double.parseDouble(in.substring(0,1));
-		//y = Double.parseDouble(in.substring(3));
+		//loc[0] = Double.parseDouble(locs[0]);
+		//loc[1] = Double.parseDouble(locs[1]);
+		x = Double.parseDouble(locs[0]);
+		y = Double.parseDouble(locs[1]);
 	}
 	public int getID()
 	{
-		return (int)(Math.random() * Math.pow(10,6))+1;
+		int ID = (int)(Math.random()*Math.pow(10,6))+1;
+		return ID;
 	}
 	public void move(double X, double Y)
 	{
@@ -30,7 +32,7 @@ public class toyota implements location
 	}
 	public double[] getLoc()
 	{
-		//double[] loc = new double[] {x,y};
+		double[] loc = new double[] {x,y};
 		return loc;
 	}
 }
