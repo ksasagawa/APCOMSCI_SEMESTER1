@@ -1,4 +1,4 @@
-public class testc2 extends testc1
+public class testc2 extends testc1 implements testINT
 {
 	public testc2()
 	{

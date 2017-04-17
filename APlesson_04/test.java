@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class test
 {
-	public void diIt()
+	public void doIt()
 	{
 		a();
 		b();
@@ -21,12 +21,12 @@ public class test
 	}
 	public static void main(String[]args)
 	{
-		testc1 a= new testc1();
-		a.diIt();
-		testc2 b= new testc2();
-		b.diIt();
-		testc3 c= new testc3();
-		c.diIt();
+		testINT a= new testc1();
+		a.doIt();
+		testINT b= new testc2();
+		b.doIt();
+		testINT c= new testc3();
+		c.doIt();
 		/*int[] arr1 = {0, 6, 0, 4, 0, 0, 2};
 		int count = 0;
 	for (int i = 0; i < arr1.length; i++)
