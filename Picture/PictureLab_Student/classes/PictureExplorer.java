@@ -800,9 +800,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
    */
   public static void main( String args[])
   {
-	Picture og = new Picture("stock-vector-granny-knows-retro-clip-art-illustration-149104391.jpg");
-	Picture pix = og.scale(0.25,0.25);
-	pix.write("smallGranny.jpg");
+	Picture pix = new Picture("seagull.jpg");
     pix.explore();
   }
   
