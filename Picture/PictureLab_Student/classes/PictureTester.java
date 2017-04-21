@@ -92,10 +92,10 @@ public class PictureTester
   }
   public static void testMirrorGull()
   {
-	Picture snowman = new Picture("seagull.jpg");
-	snowman.explore();
-    snowman.mirrorGull();
-    snowman.explore();
+	Picture seagull = new Picture("seagull.jpg");
+	seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
   }
   /** Method to test the collage method */
   public static void testCollage()
@@ -104,7 +104,19 @@ public class PictureTester
     canvas.createCollage();
     canvas.explore();
   }
-  
+  public static void testMyCollage()
+  {
+	Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
+  public static void testCopy2()
+  {
+	Picture canvas = new Picture("640x480.jpg");
+	Picture swan = new Picture("swan.jpg");
+	canvas.copy2(swan, 0,0,180,180);
+	canvas.explore();
+  }
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
