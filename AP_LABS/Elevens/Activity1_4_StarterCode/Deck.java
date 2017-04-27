@@ -29,16 +29,30 @@ public class Deck {
 	 * @param suits is an array containing all of the card suits.
 	 * @param values is an array containing all of the card point values.
 	 */
+	public Deck()
+	{
+		for(int i = 0; i < 52;i++)
+		{
+			cards.add(new Card());
+			size++;
+		}
+	}
 	public Deck(String[] ranks, String[] suits, int[] values) 
 	{
 		for(int i = 0; i < ranks.length;i++)
 		{
-			cards.add(new Card(ranks[i],suits[i],values[i]));
-			size++;
+			for(int x = 0; x < suits.length;i++)
+			{
+				cards.add(new Card(ranks[i],suits[x],values[i]));
+				size++;
+			}
 		}
 		shuffle();
 	}
-
+	public List<Card> cards()
+	{
+		return cards;
+	}
 	/**
 	 * Determines if this deck is empty (no undealt cards).
 	 * @return true if this deck is empty, false otherwise.
@@ -63,9 +77,20 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		Card[] shuffled = new Card[52];
+		int k = 0;
+		for(int j = 0; j < 25; j++)
+		{
+			shuffled[j]= cards.get(k);
+			k+=2;
+		}
+		k = 1;
+		for(int j = 26;j < 51; j++)
+		{
+			shuffled[j]= cards.get(k);
+			k+=2;
+		}
 	}
-
 	/**
 	 * Deals a card from this deck.
 	 * @return the card just dealt, or null if all the cards have been

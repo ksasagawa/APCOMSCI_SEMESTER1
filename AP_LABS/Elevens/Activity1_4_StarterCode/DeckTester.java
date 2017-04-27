@@ -8,14 +8,9 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		Deck one = new Deck();
-		Deck two = new Deck();
-		Deck three = new Deck();
-		System.out.println(one);
-		System.out.println(two);
-		System.out.println(three);
-		System.out.println(one.deal());
-		System.out.println(two.deal());
-		System.out.println(three.deal());
+		String[] ranks = new String[]{"ace","king","queen","jack","10","9","8","7","6","5","4","3","2"};
+		String[] suits = new String[]{"Hearts","Spades","Clubs","Diamonds"};
+		int[] values = new int[]{11,10,10,10,10,9,8,7,6,5,4,3,2};
+		Deck play = new Deck(ranks,suits,values);
 	}
 }

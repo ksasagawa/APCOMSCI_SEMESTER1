@@ -50,7 +50,30 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		Card[] cards = new Card[52];
+		String[] ranks = new String[]{"ace","king","queen","jack","10","9","8","7","6","5","4","3","2"};
+		String[] suits = new String[]{"Hearts","Spades","Clubs","Diamonds"};
+		int[] value = new int[]{11,10,10,10,10,9,8,7,6,5,4,3,2};
+		for(int i = 0; i < ranks.length;i++)
+		{
+			for(int x = 0; x < suits.length;i++)
+			{
+				cards[x]=(new Card(ranks[i],suits[x],value[i]));
+			}
+		}
+		Card[] shuffled = new Card[52];
+		int k = 0;
+		for(int j = 0; j < 25; j++)
+		{
+			shuffled[j]= cards[k];
+			k+=2;
+		}
+		k = 1;
+		for(int j = 26;j < 51; j++)
+		{
+			shuffled[j]= cards[k];
+			k+=2;
+		}
 	}
 
 	/**
@@ -65,6 +88,24 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void selectionShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		Card[] cards = new Card[52];
+		String[] ranks = new String[]{"ace","king","queen","jack","10","9","8","7","6","5","4","3","2"};
+		String[] suits = new String[]{"Hearts","Spades","Clubs","Diamonds"};
+		int[] value = new int[]{11,10,10,10,10,9,8,7,6,5,4,3,2};
+		for(int i = 0; i < ranks.length;i++)
+		{
+			for(int x = 0; x < suits.length;i++)
+			{
+				cards[x]=(new Card(ranks[i],suits[x],value[i]));
+			}
+		}
+		for(int k = 51; 51>1; k--)
+		{
+			Card rc = new Card();
+			int r  = ((int)(Math.random()*k));
+			rc = cards[r];
+			cards[r] = cards[k];
+			cards[k] = rc;
+		}
 	}
 }
