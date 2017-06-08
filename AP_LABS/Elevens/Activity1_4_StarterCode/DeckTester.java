@@ -12,5 +12,7 @@ public class DeckTester {
 		String[] suits = new String[]{"Hearts","Spades","Clubs","Diamonds"};
 		int[] values = new int[]{11,10,10,10,10,9,8,7,6,5,4,3,2};
 		Deck play = new Deck(ranks,suits,values);
+		play.deal();
+		System.out.println(play);
 	}
 }

@@ -43,6 +43,16 @@ public class Magpie2
 		}
 		else if (findKeyword(statement, "I like you", 0) >= 0)
 			response = "Why do you like me?";
+		else if (findKeyword(statement, "My dod died", 0) >= 0)
+			response = "Tell me more about your pet";
+		else if (findKeyword(statement, "My Father is lazy", 0) >= 0)
+			response = "Tell me more about your family";
+		else if (findKeyword(statement, "I want to sleep", 0) >= 0)
+			response = "What would it mean to sleep?";
+		else if (findKeyword(statement, "I hate you", 0) >= 0)
+			response = "Why do you hate me?";
+		else if (findKeyword(statement, "You love me", 0) >= 0)
+			response = "What makes you think that I love you?";
 		else
 		{
 		  // Look for a two word (you <something> me)
@@ -55,10 +65,12 @@ public class Magpie2
 		  {
 			 response = transformYouMeStatement(statement);
 		  }
-		  else
+		  else if(!statement.equals(""))
 		  {
 			 response = getRandomResponse();
 		  }
+		  else
+			  response = "";
 		}
 		return response;
 	}

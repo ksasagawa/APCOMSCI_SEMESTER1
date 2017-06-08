@@ -39,15 +39,15 @@ public class Deck {
 	}
 	public Deck(String[] ranks, String[] suits, int[] values) 
 	{
-		cards = new List<Card>();
+		cards = new ArrayList<Card>();
 		for(int i = 0; i < ranks.length;i++)
 		{
-			for(int x = 0; x < suits.length;i++)
+			for(String suit: suits)
 			{
-				cards.add(new Card(ranks[i],suits[x],values[i]));
-				size++;
+				cards.add(new Card(ranks[i],suit,values[i]));
 			}
 		}
+		size = cards.size();
 		shuffle();
 	}
 	public List<Card> cards()
@@ -78,26 +78,21 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		Card[] shuffled = new Card[52];
-		int k = 0;
-		for(int j = 0; j < 25; j++)
+		for(int i = size - 1; i >= 0; i-- ) 
 		{
-			shuffled[j]= cards.get(k);
-			k+=2;
-		}
-		k = 1;
-		for(int j = 26;j < 51; j++)
-		{
-			shuffled[j]= cards.get(k);
-			k+=2;
-		}
+            int pull = (int)(Math.random() * i);
+            Card card = cards.get(pull);
+            cards.set(pull, cards.get(i));
+            cards.set(i, card);
+        }
 	}
 	/**
 	 * Deals a card from this deck.
 	 * @return the card just dealt, or null if all the cards have been
 	 *         previously dealt.
 	 */
-	public Card deal() {
+	public Card deal() 
+	{
 		if(isEmpty() == true)
 			return null;
 		else
@@ -106,6 +101,7 @@ public class Deck {
 			return cards.get(size);
 		}
 	}
+	
 
 	/**
 	 * Generates and returns a string representation of this deck.
