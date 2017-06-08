@@ -39,6 +39,7 @@ public class Deck {
 	}
 	public Deck(String[] ranks, String[] suits, int[] values) 
 	{
+		cards = new List<Card>();
 		for(int i = 0; i < ranks.length;i++)
 		{
 			for(int x = 0; x < suits.length;i++)
