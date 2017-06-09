@@ -97,6 +97,18 @@ public class Picture extends SimplePicture
       }
     }
   }
+  public void keepOnlyBlue()
+  {
+	 Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setRed(0);
+		pixelObj.setGreen(0);
+      }
+    }
+  }
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
@@ -352,8 +364,6 @@ public class Picture extends SimplePicture
   {
     Pixel leftPixel = null;
     Pixel rightPixel = null;
-	Pixel topPixel = null;
-	Pixel botPixel =null;
     Pixel[][] pixels = this.getPixels2D();
     Color rightColor = null;
     for (int row = 0; row < pixels.length; row++)
@@ -369,45 +379,43 @@ public class Picture extends SimplePicture
           leftPixel.setColor(Color.BLACK);
         else
           leftPixel.setColor(Color.WHITE);
-	    topPixel = pixels[row][col];
-		botPixel = pixels[row+1][col];
-		if (topPixel.colorDistance(rightColor) > 
-            edgeDist)
-          topPixel.setColor(Color.BLACK);
-        else
-          botPixel.setColor(Color.WHITE);
       }
     }
   }
   public void edgeDetection2(int edgeDist)
+  {
+	Pixel leftPixel = null;
+	Pixel rightPixel = null;
+	Pixel topPixel = null;
+	Pixel botPixel = null;
+	Pixel[][] pixels = this.getPixels2D();
+	Color rightColor = null;
+	Color botColor = null;
+	for (int row = 0; row < pixels.length-1; row++)
 	{
-		Color leftColor = null;
-    Color rightColor = null;
-	Color topColor = null;
-	Color botColor =null;
-    Pixel[][] pixels = this.getPixels2D();
-    for (int row = 0; row < pixels.length; row++)
-    {
-      for (int col = 0; 
-           col < pixels[0].length-1; col++)
-      {
-        leftColor = pixels[row][col].getColor();
-        rightColor = pixels[row][col+1].getColor();
-        if (Math.sqrt((leftColor.getRed()-rightColor.getRed())^2+(leftColor.getBlue()-rightColor.getBlue())^2+(leftColor.getRed()-rightColor.getRed()^2)) > 
-            edgeDist)
-          pixels[row][col].setColor(Color.BLACK);
-        else
-          pixels[row][col].setColor(Color.WHITE);
-	    topColor = pixels[row][col].getColor();
-		botColor = pixels[row+1][col].getColor();
-		if (Math.sqrt((leftColor.getRed()-rightColor.getRed())^2+(leftColor.getBlue()-rightColor.getBlue())^2+(leftColor.getRed()-rightColor.getRed()^2)) > 
-            edgeDist)
-          pixels[row][col].setColor(Color.BLACK);
-        else
-          pixels[row][col].setColor(Color.WHITE);
-      }
-    }
+	  for (int col = 0; 
+		  col < pixels[0].length-1; col++)
+	  {
+		leftPixel = pixels[row][col];
+		rightPixel = pixels[row][col+1];
+		rightColor = rightPixel.getColor();
+		if (leftPixel.colorDistance(rightColor) > 
+			edgeDist)
+		  leftPixel.setColor(Color.BLACK);
+		else
+		{
+		topPixel = pixels[row][col];
+		botPixel = pixels[row+1][col];
+		botColor = botPixel.getColor();
+		if (topPixel.colorDistance(botColor) > 
+			edgeDist)
+		  topPixel.setColor(Color.BLACK);
+		else
+		  topPixel.setColor(Color.WHITE);
+		}
+	  }
 	}
+  }
 	public void negate()
 	{
 		Pixel[][] pixels = this.getPixels2D();
@@ -415,9 +423,9 @@ public class Picture extends SimplePicture
 		{
 			for (Pixel pixelObj : rowArray)
 			{
-				pixelObj.setRed(pixelObj.getRed()-255);
-				pixelObj.setGreen(pixelObj.getGreen()-255);
-				pixelObj.setBlue(pixelObj.getBlue()-255);
+				pixelObj.setRed(255-pixelObj.getRed());
+				pixelObj.setGreen(255-pixelObj.getGreen());
+				pixelObj.setBlue(255-pixelObj.getBlue());
 			}
 		}
 	}
@@ -447,7 +455,7 @@ public class Picture extends SimplePicture
 			}
 		}
 	}
-  
+	
   
   /* Main method for testing - each class in Java can have a main 
    * method 
